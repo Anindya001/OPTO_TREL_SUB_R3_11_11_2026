@@ -1,0 +1,47 @@
+PASS  device count
+PASS  failure count
+PASS  run-out count
+PASS  failures by excursion
+PASS  Full likelihood: k
+PASS  Full likelihood: beta1
+PASS  Full likelihood: beta0
+PASS  Full likelihood: B10(25)
+PASS  Omit 25/50 run-outs: k
+PASS  Omit 25/50 run-outs: beta1
+PASS  Omit 25/50 run-outs: beta0
+PASS  Omit 25/50 run-outs: B10(25)
+PASS  Omit 75 run-outs: k
+PASS  Omit 75 run-outs: beta1
+PASS  Omit 75 run-outs: beta0
+PASS  Omit 75 run-outs: B10(25)
+PASS  Omit all run-outs: k
+PASS  Omit all run-outs: beta1
+PASS  Omit all run-outs: beta0
+PASS  Omit all run-outs: B10(25)
+PASS  Only 100-150 groups: k
+PASS  Only 100-150 groups: beta1
+PASS  Only 100-150 groups: beta0
+PASS  Only 100-150 groups: B10(25)
+PASS  profile B10(35): mle
+PASS  profile B10(35): lower
+PASS  profile B10(35): upper
+PASS  shape at 100 C
+PASS  scale at 100 C
+PASS  shape at 125 C
+PASS  scale at 125 C
+PASS  shape at 150 C
+PASS  scale at 150 C
+PASS  common-shape LRT
+PASS  common-shape p-value
+PASS  B10(20) q025
+PASS  B10(20) median
+PASS  B10(20) q975
+PASS  B10(25) q025
+PASS  B10(25) median
+PASS  B10(25) q975
+PASS  B10(35) q025
+PASS  B10(35) median
+PASS  B10(35) q975
+PASS  PICM-C non-monotone fraction over 25-150 C
+
+45 passed; 0 failed

@@ -1,0 +1,67 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8",
+    "PyMuPDF": "1.26.6"
+  },
+  "mode": "four posterior regenerations and retained summaries",
+  "steps": [
+    {
+      "script": "verify_package.py",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 0.12024473300004956
+    },
+    {
+      "script": "run_final_posteriors.py",
+      "arguments": [
+        "--output",
+        "<output>/posterior",
+        "--save-chains"
+      ],
+      "returncode": 0,
+      "seconds": 320.0246461239999
+    },
+    {
+      "script": "make_model_figures.py",
+      "arguments": [
+        "--output",
+        "<output>"
+      ],
+      "returncode": 0,
+      "seconds": 8.216384878000099
+    },
+    {
+      "script": "make_protocol_reference_figures.py",
+      "arguments": [
+        "--output",
+        "<output>"
+      ],
+      "returncode": 0,
+      "seconds": 1.8018551889999799
+    },
+    {
+      "script": "export_publication_tables.py",
+      "arguments": [
+        "--output",
+        "<output>"
+      ],
+      "returncode": 0,
+      "seconds": 1.5900056820000827
+    },
+    {
+      "script": "verify_package.py",
+      "arguments": [
+        "--reproduced",
+        "<output>"
+      ],
+      "returncode": 0,
+      "seconds": 0.0825480900000457
+    }
+  ],
+  "status": "PASS"
+}

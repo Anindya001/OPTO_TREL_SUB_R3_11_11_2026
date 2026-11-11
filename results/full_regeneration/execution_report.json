@@ -1,0 +1,76 @@
+{
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v378-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8",
+    "PyMuPDF": "1.26.6"
+  },
+  "mode": "four posterior regenerations and retained summaries; secondary analyses regenerated",
+  "steps": [
+    {
+      "script": "verify_package.py",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 0.0429671839999628
+    },
+    {
+      "script": "run_final_posteriors.py",
+      "arguments": [
+        "--output",
+        "<output>/posterior",
+        "--save-chains"
+      ],
+      "returncode": 0,
+      "seconds": 124.16944984400004
+    },
+    {
+      "script": "make_model_figures.py",
+      "arguments": [
+        "--output",
+        "<output>"
+      ],
+      "returncode": 0,
+      "seconds": 5.50617028399995
+    },
+    {
+      "script": "make_protocol_reference_figures.py",
+      "arguments": [
+        "--output",
+        "<output>"
+      ],
+      "returncode": 0,
+      "seconds": 1.5762058409999327
+    },
+    {
+      "script": "export_publication_tables.py",
+      "arguments": [
+        "--output",
+        "<output>"
+      ],
+      "returncode": 0,
+      "seconds": 1.0415948869999738
+    },
+    {
+      "script": "run_secondary_analyses.py",
+      "arguments": [
+        "--output",
+        "<output>/secondary"
+      ],
+      "returncode": 0,
+      "seconds": 76.05511283599992
+    },
+    {
+      "script": "verify_package.py",
+      "arguments": [
+        "--reproduced",
+        "<output>"
+      ],
+      "returncode": 0,
+      "seconds": 0.04672406400004547
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "number": 2,
+    "title": "Programmed thermal profiles",
+    "file": "figures/Figure_02_thermal_programme_single.pdf",
+    "kind": "generated",
+    "sha256": "4116c5218d832db76c3c7b53fe7160af683fdb8d8a5a82a78fd47a056b139269",
+    "publication_basename": "thermal_programme_single.pdf",
+    "generator": "code/make_protocol_reference_figures.py"
+  },
+  {
+    "number": 3,
+    "title": "Stress-wise survival panels",
+    "file": "figures/Figure_03_main_survival_panels_pub.pdf",
+    "kind": "generated",
+    "sha256": "79eae9babf4b77b215f2dab2cb8b26d25b66b0fbe9ba2b7e931394f63cf36ef6",
+    "publication_basename": "main_survival_panels_pub.pdf",
+    "generator": "code/make_survival_panels.py"
+  },
+  {
+    "number": 6,
+    "title": "Stress-life relations",
+    "file": "figures/Figure_06_restored_stress_life.pdf",
+    "kind": "generated",
+    "sha256": "cfa2cf91716fe0fead3597b34fb8c1b9438a7205dc2adbb3e34240a1a740f818",
+    "publication_basename": "restored_stress_life.pdf",
+    "generator": "code/make_model_figures.py"
+  },
+  {
+    "number": 7,
+    "title": "Failure-fraction check",
+    "file": "figures/Figure_07_restored_failure_fraction.pdf",
+    "kind": "generated",
+    "sha256": "5628c43fa25f8a0b1fe081f093034679a68ce3e990f1dc40f1332fb14b146dd9",
+    "publication_basename": "restored_failure_fraction.pdf",
+    "generator": "code/make_model_figures.py"
+  },
+  {
+    "number": 8,
+    "title": "Reference-case estimation routes",
+    "file": "figures/Figure_08_reference_routes.pdf",
+    "kind": "generated",
+    "sha256": "5e34bda761c4d582e68d389d0aec59cf65ffe4827f9d0f180b815b810bc0f2ee",
+    "publication_basename": "reference_routes.pdf",
+    "generator": "code/make_protocol_reference_figures.py"
+  },
+  {
+    "number": 9,
+    "title": "Prior versus posterior",
+    "file": "figures/Figure_09_restored_prior_posterior.pdf",
+    "kind": "generated",
+    "sha256": "8b794258c898993fdcbcd6a15630d761f3355fe283a3fed4765d151d3e8070ec",
+    "publication_basename": "restored_prior_posterior.pdf",
+    "generator": "code/make_model_figures.py"
+  },
+  {
+    "number": 10,
+    "title": "Model-form bands",
+    "file": "figures/Figure_10_restored_model_bands.pdf",
+    "kind": "generated",
+    "sha256": "d2a466d34c15fc23f567c9571cba25c890cc9f5f8e53253b56972e6b63f36f2d",
+    "publication_basename": "restored_model_bands.pdf",
+    "generator": "code/make_model_figures.py"
+  },
+  {
+    "number": 11,
+    "title": "Mission probabilities",
+    "file": "figures/Figure_11_restored_mission_probabilities.pdf",
+    "kind": "generated",
+    "sha256": "f5506f320e129d4a2c93aed6ad02f719050961840c345d604036c2c8435b4f0f",
+    "publication_basename": "restored_mission_probabilities.pdf",
+    "generator": "code/make_model_figures.py"
+  }
+]

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: >-
+  If you use the code, lifetime data, or computational results in this
+  repository, please cite this software archive. Cite the associated
+  journal article separately when its bibliographic record is available.
+type: software
+title: >-
+  Regime-Aware Censored Weibull Reliability Inference for Small-Sample
+  Optocoupler Thermal-Cycling Data: Computational Reproducibility Archive
+authors:
+  - family-names: "Bhattacharyya"
+    given-names: "Anindya"
+repository-code: "https://github.com/Anindya001/OPTO_TREL_SUB_R3_11_11_2026"
+url: "https://github.com/Anindya001/OPTO_TREL_SUB_R3_11_11_2026"
+abstract: >-
+  Reproducibility archive accompanying IEEE Transactions on Reliability
+  manuscript TR-2026-412.R3. It contains unit-level right-censored thermal
+  cycling lifetimes for 48 optocouplers, Weibull accelerated-life inference,
+  posterior draws, comparator analyses, statistical checks, and computational
+  figure-generation scripts. Experimental apparatus imagery, raw electrical
+  traces, and X-ray photographs are outside the archive's scope.
+keywords:
+  - optocoupler
+  - thermal cycling
+  - reliability
+  - right censoring
+  - Weibull model
+  - Bayesian inference
+  - reproducible research

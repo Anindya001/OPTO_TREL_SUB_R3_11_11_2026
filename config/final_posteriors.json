@@ -1,0 +1,254 @@
+{
+  "title": "TR-2026-412 final posterior configuration (four prior settings)",
+  "purpose": "Single source of truth for the priors, support restrictions, chain lengths, initial states and random seeds that generated draws/{baseline,diffuse,conservative,relaxed}_chains.npy. Read by code/run_final_posteriors.py.",
+  "data": {
+    "file": "data/optocoupler_ttf_unit_level.csv",
+    "sha256": "034e3c9cdc4d029187572a6b4dbe9547b39821a304fb249982b4e1f77f7ab5a2",
+    "cycle_hours": 3.0,
+    "time_variable": "cycles = ttf_hours / 3 (exact; the rounded helper column is not used)"
+  },
+  "model": {
+    "name": "PICM-L",
+    "lifetime": "Weibull(shape k, scale eta)",
+    "stress_relation": "log(eta) = beta0 - beta1 * log(delta_T / 1 degC)",
+    "parameter_order": [
+      "k",
+      "beta1",
+      "beta0"
+    ],
+    "likelihood": "exact right-censored: failures contribute the density, run-outs the survival function",
+    "likelihood_support": {
+      "k_gt": 1.0,
+      "beta1_gt": 0.0
+    }
+  },
+  "sampler": {
+    "algorithm": "adaptive random-walk Metropolis, adaptation during burn-in only, kernel fixed afterwards",
+    "n_chains": 3,
+    "burn_in": 12000,
+    "retained_per_chain": 20000,
+    "iterations_per_chain": 32000,
+    "thinning": 1,
+    "retained_total": 60000,
+    "initial_proposal_covariance_diag_sd": [
+      0.12,
+      0.08,
+      0.35
+    ],
+    "covariance_scaling": "2.38^2 / d with d = 3, applied to the sample covariance of the accepted burn-in states, plus 1e-8 I",
+    "covariance_update_block": 100,
+    "covariance_min_accepted_states": 5,
+    "scale_adaptation": "log s <- clip(log s + (t+1)^(-0.6) * (accepted - 0.234), -3, 3); proposal covariance = exp(2 log s) * base covariance",
+    "target_acceptance": 0.234,
+    "scale_step_exponent": 0.6,
+    "log_scale_clip": 3.0,
+    "random_number_generator": "numpy.random.default_rng(seed) (PCG64), one generator per chain",
+    "random_stream_order": "one multivariate_normal(theta, proposal covariance) draw per iteration; one uniform() draw only when the proposal lies inside the prior support and has a finite log-posterior",
+    "seeds": [
+      20260311,
+      20260312,
+      20260313
+    ],
+    "seeds_shared_across_settings": true
+  },
+  "initialisation": {
+    "rule": "chain 1 at the PICM-L MLE (k, beta1, beta0); chain 2 at (0.8 k, 1.2 beta1, beta0 - 1.2); chain 3 at (1.2 k, 0.8 beta1, beta0 + 1.2). The same three states are used for all four prior settings.",
+    "mle": [
+      2.988247972624225,
+      2.435846222548775,
+      17.66195449833879
+    ],
+    "mle_source": "code/baseline_analysis.py fit_picm_l_mle(n_starts=40, seed=20260301); equals results/primary_fit.json",
+    "initial_states": [
+      [
+        2.988247972624225,
+        2.435846222548775,
+        17.66195449833879
+      ],
+      [
+        2.39059837809938,
+        2.92301546705853,
+        16.46195449833879
+      ],
+      [
+        3.58589756714907,
+        1.9486769780390203,
+        18.86195449833879
+      ]
+    ]
+  },
+  "prior_settings": {
+    "baseline": {
+      "k": {
+        "family": "Gamma(shape, rate)",
+        "shape": 9.0,
+        "rate": 3.0,
+        "support_gt": 1.0
+      },
+      "beta1": {
+        "family": "Normal",
+        "mean": 2.5,
+        "sd": 0.8,
+        "support_gt": 0.5
+      },
+      "beta0": {
+        "family": "Normal",
+        "mean": 18.0,
+        "sd": 4.0
+      },
+      "retained_draws": "draws/baseline_chains.npy"
+    },
+    "diffuse": {
+      "k": {
+        "family": "Gamma(shape, rate)",
+        "shape": 6.0,
+        "rate": 2.0,
+        "support_gt": 1.0
+      },
+      "beta1": {
+        "family": "Normal",
+        "mean": 2.5,
+        "sd": 1.6,
+        "support_gt": 0.5
+      },
+      "beta0": {
+        "family": "Normal",
+        "mean": 18.0,
+        "sd": 8.0
+      },
+      "retained_draws": "draws/diffuse_chains.npy"
+    },
+    "conservative": {
+      "k": {
+        "family": "Gamma(shape, rate)",
+        "shape": 12.0,
+        "rate": 4.0,
+        "support_gt": 1.0
+      },
+      "beta1": {
+        "family": "Normal",
+        "mean": 2.5,
+        "sd": 0.5,
+        "support_gt": 0.5
+      },
+      "beta0": {
+        "family": "Normal",
+        "mean": 18.0,
+        "sd": 2.5
+      },
+      "retained_draws": "draws/conservative_chains.npy"
+    },
+    "relaxed": {
+      "k": {
+        "family": "Gamma(shape, rate)",
+        "shape": 9.0,
+        "rate": 3.0,
+        "support_gt": 1.0
+      },
+      "beta1": {
+        "family": "Normal",
+        "mean": 2.5,
+        "sd": 0.8,
+        "support_gt": 0.0
+      },
+      "beta0": {
+        "family": "Normal",
+        "mean": 18.0,
+        "sd": 4.0
+      },
+      "retained_draws": "draws/relaxed_chains.npy"
+    }
+  },
+  "reporting": {
+    "b10_failure_probability": 0.1,
+    "delta_T_degC": [
+      20.0,
+      25.0,
+      35.0
+    ],
+    "interval": "equal-tailed 95% (2.5% and 97.5% quantiles of the 60000 pooled draws)"
+  },
+  "expected_b10_cycles": {
+    "baseline": {
+      "20": [
+        5653.084438842161,
+        15187.579093340786,
+        40734.50794889012
+      ],
+      "25": [
+        3642.569665158341,
+        8772.749516517077,
+        20873.05511737338
+      ],
+      "35": [
+        1895.8321171155274,
+        3845.7524886277497,
+        7610.101222564411
+      ]
+    },
+    "diffuse": {
+      "20": [
+        5178.525194213226,
+        14977.789472742768,
+        44844.68687206389
+      ],
+      "25": [
+        3408.5522510943333,
+        8676.570632990863,
+        22619.205610758447
+      ],
+      "35": [
+        1797.8101480124321,
+        3813.9000565785373,
+        8113.71592384859
+      ]
+    },
+    "conservative": {
+      "20": [
+        6625.60865573552,
+        15483.294109875433,
+        36034.030688002174
+      ],
+      "25": [
+        4227.148641553223,
+        8938.165389324486,
+        18772.32820316714
+      ],
+      "35": [
+        2125.823055177166,
+        3894.729146501286,
+        7040.711335559079
+      ]
+    },
+    "relaxed": {
+      "20": [
+        5655.397577230709,
+        15343.077868083605,
+        40837.24591028799
+      ],
+      "25": [
+        3676.942638626489,
+        8837.61772380158,
+        20942.97873118484
+      ],
+      "35": [
+        1920.199041120672,
+        3861.082534941951,
+        7661.610335409936
+      ]
+    }
+  },
+  "tolerances": {
+    "chain_path_abs": 1e-08,
+    "summary_from_retained_abs_cycles": 1e-06,
+    "summary_fallback_mcse_multiple": 4.0
+  },
+  "archive_sha256": {
+    "draws/baseline_chains.npy": "bae0fea04f5791cde79ef38bed34c52632430b01d605494af2df857321a92c96",
+    "draws/conservative_chains.npy": "ebde995f860aa0bc2d34b4cde415a2746acff01bca4ce878a01fde3963fdd389",
+    "draws/curved_laplace.npy": "5452f94616579ba110991d2a11cbd41fa14b436cd7153e9b76fe0edc7aba79f2",
+    "draws/diffuse_chains.npy": "fd413b73279dad984cc8777a5b14c33031bab0329f6fadfed383d97f3e5951ca",
+    "draws/lognormal_laplace.npy": "86e5595388b2a690694109715f8963c018bff08659066be61e7316ab3fa63a77",
+    "draws/relaxed_chains.npy": "513d9669f797bee23cfa8cfd1468b990a9e8e17b1645d4c6cc26809b2d7956ac"
+  }
+}

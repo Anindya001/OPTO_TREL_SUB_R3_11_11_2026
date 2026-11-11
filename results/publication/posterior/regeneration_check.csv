@@ -1,0 +1,13 @@
+setting,chain,seed,acceptance_rate,max_abs_difference_from_retained,path_reproduced,exact_array_match,proposals_0_lt_beta1_le_0p5_burn_in,proposals_0_lt_beta1_le_0p5_retained
+baseline,1,20260311,0.21515,3.5349501104064984e-13,True,False,4,4
+baseline,2,20260312,0.23925,1.7053025658242404e-13,True,False,0,0
+baseline,3,20260313,0.24805,8.171241461241152e-14,True,False,0,0
+diffuse,1,20260311,0.2579,1.3855583347321954e-13,True,False,16,8
+diffuse,2,20260312,0.2442,8.171241461241152e-14,True,False,0,2
+diffuse,3,20260313,0.26645,6.750155989720952e-14,True,False,0,0
+conservative,1,20260311,0.23415,1.5631940186722204e-13,True,False,0,0
+conservative,2,20260312,0.2444,3.481659405224491e-13,True,False,0,0
+conservative,3,20260313,0.24195,1.4210854715202004e-13,True,False,0,0
+relaxed,1,20260311,0.2217,1.5054624213917123e-13,True,False,4,6
+relaxed,2,20260312,0.23925,1.7053025658242404e-13,True,False,0,0
+relaxed,3,20260313,0.24805,8.171241461241152e-14,True,False,0,0

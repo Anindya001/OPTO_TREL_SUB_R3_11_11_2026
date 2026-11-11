@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "check": "curved archived-fit draw replay",
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "check": "lognormal archived-fit draw replay",
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "check": "Group bootstrap",
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "LOSO reported predictive summaries",
+      "max_absolute_difference": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Firth-type estimate",
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "Firth-type stationarity (gradient norm)",
+      "max_absolute_difference": 2.649218253200404e-08,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "check": "Firth-type Nelder-Mead confirmation",
+      "max_absolute_difference": 3.989048247277083e-08,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "check": "Bartlett endpoints (cycles)",
+      "max_absolute_difference": 0.0003260874273109948,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Firth B10 (cycles)",
+      "max_absolute_difference": 0.0,
+      "tolerance": 0.05,
+      "passed": true
+    },
+    {
+      "check": "MLE delta endpoints (cycles)",
+      "max_absolute_difference": 0.009648101051425328,
+      "tolerance": 0.05,
+      "passed": true
+    }
+  ],
+  "passed": 10,
+  "failed": 0
+}

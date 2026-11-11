@@ -1,0 +1,36 @@
+{
+ "reference_excursion_C": 35,
+ "optimiser_seed": 20260301,
+ "primary_starts": 40,
+ "firth_seed": 20260302,
+ "firth_starts": 20,
+ "curved_seed": 20260303,
+ "curved_starts": 20,
+ "lognormal_seed": 20260304,
+ "lognormal_starts": 20,
+ "secondary_draws": 30000,
+ "curved_draw_seed": 20260342,
+ "lognormal_draw_seed": 20260343,
+ "prior_draws": 60000,
+ "prior_seed": 20260836,
+ "group_bootstrap_replicates": 2000,
+ "group_bootstrap_seed": 20261221,
+ "profile_grid_points": 61,
+ "profile_seed": 20260422,
+ "bartlett_replicates": 120,
+ "bartlett_seed": 20260321,
+ "loso": {
+  "chains": 3,
+  "burn_in": 2500,
+  "retained": 3000,
+  "adapt_block": 100,
+  "optimiser_starts": 12,
+  "optimiser_seed_rule": "20260301 + stress_C + 700",
+  "chain_seed_rule": "[20260311,20260312,20260313] + stress_C + 5000",
+  "predictive_seed_rule": "20260331 + stress_C + 9000"
+ },
+ "comparator_draw_generation_fit_files": {
+  "curved": "results/curved_fit.json",
+  "lognormal": "results/lognormal_fit.json"
+ }
+}

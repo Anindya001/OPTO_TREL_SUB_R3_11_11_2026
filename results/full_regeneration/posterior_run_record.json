@@ -1,0 +1,156 @@
+{
+  "configuration": "config/final_posteriors.json",
+  "configuration_sha256": "a74667e6a61415fdf0067fac0e100ca6d77a513039bfe866b71d52c9dd246e50",
+  "exact_regeneration": true,
+  "failures": [],
+  "mode": "regenerate",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "python": "3.13.18",
+  "regeneration_rows": [
+    {
+      "acceptance_rate": 0.21515,
+      "chain": 1,
+      "exact_array_match": true,
+      "max_abs_difference_from_retained": 0.0,
+      "path_reproduced": true,
+      "proposals_0_lt_beta1_le_0p5_burn_in": 4,
+      "proposals_0_lt_beta1_le_0p5_retained": 4,
+      "seed": 20260311,
+      "setting": "baseline"
+    },
+    {
+      "acceptance_rate": 0.23925,
+      "chain": 2,
+      "exact_array_match": true,
+      "max_abs_difference_from_retained": 0.0,
+      "path_reproduced": true,
+      "proposals_0_lt_beta1_le_0p5_burn_in": 0,
+      "proposals_0_lt_beta1_le_0p5_retained": 0,
+      "seed": 20260312,
+      "setting": "baseline"
+    },
+    {
+      "acceptance_rate": 0.24805,
+      "chain": 3,
+      "exact_array_match": true,
+      "max_abs_difference_from_retained": 0.0,
+      "path_reproduced": true,
+      "proposals_0_lt_beta1_le_0p5_burn_in": 0,
+      "proposals_0_lt_beta1_le_0p5_retained": 0,
+      "seed": 20260313,
+      "setting": "baseline"
+    },
+    {
+      "acceptance_rate": 0.2579,
+      "chain": 1,
+      "exact_array_match": true,
+      "max_abs_difference_from_retained": 0.0,
+      "path_reproduced": true,
+      "proposals_0_lt_beta1_le_0p5_burn_in": 16,
+      "proposals_0_lt_beta1_le_0p5_retained": 8,
+      "seed": 20260311,
+      "setting": "diffuse"
+    },
+    {
+      "acceptance_rate": 0.2442,
+      "chain": 2,
+      "exact_array_match": true,
+      "max_abs_difference_from_retained": 0.0,
+      "path_reproduced": true,
+      "proposals_0_lt_beta1_le_0p5_burn_in": 0,
+      "proposals_0_lt_beta1_le_0p5_retained": 2,
+      "seed": 20260312,
+      "setting": "diffuse"
+    },
+    {
+      "acceptance_rate": 0.26645,
+      "chain": 3,
+      "exact_array_match": true,
+      "max_abs_difference_from_retained": 0.0,
+      "path_reproduced": true,
+      "proposals_0_lt_beta1_le_0p5_burn_in": 0,
+      "proposals_0_lt_beta1_le_0p5_retained": 0,
+      "seed": 20260313,
+      "setting": "diffuse"
+    },
+    {
+      "acceptance_rate": 0.23415,
+      "chain": 1,
+      "exact_array_match": true,
+      "max_abs_difference_from_retained": 0.0,
+      "path_reproduced": true,
+      "proposals_0_lt_beta1_le_0p5_burn_in": 0,
+      "proposals_0_lt_beta1_le_0p5_retained": 0,
+      "seed": 20260311,
+      "setting": "conservative"
+    },
+    {
+      "acceptance_rate": 0.2444,
+      "chain": 2,
+      "exact_array_match": true,
+      "max_abs_difference_from_retained": 0.0,
+      "path_reproduced": true,
+      "proposals_0_lt_beta1_le_0p5_burn_in": 0,
+      "proposals_0_lt_beta1_le_0p5_retained": 0,
+      "seed": 20260312,
+      "setting": "conservative"
+    },
+    {
+      "acceptance_rate": 0.24195,
+      "chain": 3,
+      "exact_array_match": true,
+      "max_abs_difference_from_retained": 0.0,
+      "path_reproduced": true,
+      "proposals_0_lt_beta1_le_0p5_burn_in": 0,
+      "proposals_0_lt_beta1_le_0p5_retained": 0,
+      "seed": 20260313,
+      "setting": "conservative"
+    },
+    {
+      "acceptance_rate": 0.2217,
+      "chain": 1,
+      "exact_array_match": true,
+      "max_abs_difference_from_retained": 0.0,
+      "path_reproduced": true,
+      "proposals_0_lt_beta1_le_0p5_burn_in": 4,
+      "proposals_0_lt_beta1_le_0p5_retained": 6,
+      "seed": 20260311,
+      "setting": "relaxed"
+    },
+    {
+      "acceptance_rate": 0.23925,
+      "chain": 2,
+      "exact_array_match": true,
+      "max_abs_difference_from_retained": 0.0,
+      "path_reproduced": true,
+      "proposals_0_lt_beta1_le_0p5_burn_in": 0,
+      "proposals_0_lt_beta1_le_0p5_retained": 0,
+      "seed": 20260312,
+      "setting": "relaxed"
+    },
+    {
+      "acceptance_rate": 0.24805,
+      "chain": 3,
+      "exact_array_match": true,
+      "max_abs_difference_from_retained": 0.0,
+      "path_reproduced": true,
+      "proposals_0_lt_beta1_le_0p5_burn_in": 0,
+      "proposals_0_lt_beta1_le_0p5_retained": 0,
+      "seed": 20260313,
+      "setting": "relaxed"
+    }
+  ],
+  "relaxed_chain_identical_to_baseline": {
+    "chain_1": false,
+    "chain_2": true,
+    "chain_3": true
+  },
+  "scipy": "1.17.0",
+  "settings_run": [
+    "baseline",
+    "diffuse",
+    "conservative",
+    "relaxed"
+  ]
+}
